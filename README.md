@@ -21,7 +21,7 @@ where we have an important community of translators.
 
 ## Road map
 
-* replace sveltiacms preview by a live call to explorer to render the page as it would be rendered on the website (maybe sending content in the request)
-* add justfile and just commands
-* add an enforcement as github actions that files in static are in a year/month subfolder
-* add crowdin configuration
+- replace sveltiacms preview by a live call to explorer to render the page as it would be rendered on the website (maybe sending content in the request)
+- add justfile and just commands
+- add an enforcement as github actions that files in static are in a year/month subfolder
+- add crowdin configuration
