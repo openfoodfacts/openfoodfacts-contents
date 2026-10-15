@@ -34,8 +34,8 @@ const backend =
  * Both fields are translatable per locale.
  */
 const pageFields = [
-	{ name: 'title', label: 'Title', widget: 'string' as const, i18n: true },
-	{ name: 'body', label: 'Body', widget: 'markdown' as const, i18n: true }
+	{ name: 'title', label: 'Title', widget: 'string' as const, i18n: true, required: false },
+	{ name: 'body', label: 'Body', widget: 'markdown' as const, i18n: true, required: false }
 ];
 
 /**
@@ -48,6 +48,14 @@ const pages = [
 	{ name: 'data', label: 'Data' },
 	{ name: 'discover', label: 'Discover' }
 ];
+
+const pagesConfig = pages.map(({ name, label }) => ({
+	name,
+	label,
+	file: `content/{{locale}}/${name}.md`,
+	i18n: true,
+	fields: pageFields
+}));
 
 /**
  * Sveltia CMS configuration.
@@ -69,13 +77,7 @@ export const config: CmsConfig = {
 			name: 'pages',
 			label: 'Pages',
 			i18n: true,
-			files: pages.map(({ name, label }) => ({
-				name,
-				label,
-				file: `content/{{locale}}/${name}.md`,
-				i18n: true,
-				fields: pageFields
-			}))
+			files: pagesConfig
 		}
 	]
 };
