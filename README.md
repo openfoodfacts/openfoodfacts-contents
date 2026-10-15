@@ -1,56 +1,27 @@
-# sv
+# Open Food Facts contents
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A repository for contents for open food facts websites.
 
-## Creating a project
+## How it works
 
-If you're seeing this, you've probably already done this step. Congrats!
+Content is managed thanks to [SveltiaCMS](https://sveltiacms.app/),
+[installed as a Svelte application](./docs/explain-sveltia.md).
 
-```sh
-# create a new project
-npx sv create my-app
-```
+It uses extended markdown syntax.
 
-To recreate this project with the same configuration:
+It offers non technical user a direct preview of the content.
 
-```sh
-# recreate this project
-pnpm dlx sv@1.1.1 create --template minimal --types ts --add mdsvex prettier eslint --install pnpm ./
-```
+Those content will then be interpreted by open food facts explorer
+to render static contents.
 
-## Adding features
+## Translating
 
-Add features to your project with `sv add`:
+Translations happens [on crowdin](https://crowdin.com/project/openfoodfacts)
+where we have an important community of translators.
 
-```sh
-npx sv add
-```
+## Road map
 
-For example, to add Tailwind CSS:
-
-```sh
-npx sv add tailwindcss
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+* replace sveltiacms preview by a live call to explorer to render the page as it would be rendered on the website (maybe sending content in the request)
+* add justfile and just commands
+* add an enforcement as github actions that files in static are in a year/month subfolder
+* add crowdin configuration

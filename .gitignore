@@ -1,5 +1,8 @@
 node_modules
 
+# script to bootstrap nvm
+local-nvm.sh
+
 # Output
 .output
 .vercel

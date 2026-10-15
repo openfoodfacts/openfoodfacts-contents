@@ -35,5 +35,8 @@
 	"imports": {
 		"#lib": "./src/lib/index.js",
 		"#lib/*": "./src/lib/*"
+	},
+	"dependencies": {
+		"@sveltia/cms": "^0.236.0"
 	}
 }
