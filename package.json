@@ -18,6 +18,7 @@
 		"@sveltejs/adapter-auto": "^8.0.0",
 		"@sveltejs/kit": "^3.0.0",
 		"@sveltejs/vite-plugin-svelte": "^7.2.0",
+		"@types/js-yaml": "^4.0.9",
 		"@types/node": "^24",
 		"eslint": "^10.4.1",
 		"eslint-config-prettier": "^10.1.8",
@@ -37,6 +38,7 @@
 		"#lib/*": "./src/lib/*"
 	},
 	"dependencies": {
-		"@sveltia/cms": "^0.236.0"
+		"@sveltia/cms": "^0.236.0",
+		"js-yaml": "^5.5.0"
 	}
 }

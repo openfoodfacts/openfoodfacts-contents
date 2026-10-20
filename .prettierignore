@@ -7,3 +7,6 @@ bun.lockb
 
 # Miscellaneous
 /static/
+
+# Kilo tooling state (runtime, not project content)
+.kilo/
